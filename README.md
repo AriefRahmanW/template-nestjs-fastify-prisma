@@ -23,7 +23,10 @@ pnpm run start:prod
 ```
 
 #### Prisma Command
+1. Migrate
 ```npx prisma migrate dev --name init```
+2. Seedig
+```npx prisma db seed```
 
 ### Refrerence
 - https://www.prisma.io/blog/nestjs-prisma-rest-api-7D056s1BmOL0

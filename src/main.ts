@@ -10,7 +10,9 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter()
+    new FastifyAdapter({
+      logger: true
+    })
   );
   app.useGlobalPipes(new ValidationPipe({
     disableErrorMessages: false // change to true in production
